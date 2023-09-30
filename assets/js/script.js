@@ -1,8 +1,10 @@
+// Define constants for elements
 const dropList = document.querySelectorAll("form select"),
 fromCurrency = document.querySelector(".from select"),
 toCurrency = document.querySelector(".to select"),
 getButton = document.querySelector("form button");
 
+// Initialize currency dropdowns
 for (let i = 0; i < dropList.length; i++) {
     for(let currency_code in country_list){
         let selected = i == 0 ? currency_code == "BRL" ? "selected" : "" : currency_code == "USD" ? "selected" : "";
@@ -19,16 +21,18 @@ for (let i = 0; i < dropList.length; i++) {
     }); 
 }
 
+// Event listeners for currency dropdown changes
 fromCurrency.addEventListener("change", e=>{
     document.querySelector("#from-currency-icon").innerText = fromCurrency.value;
     document.querySelector("form #output-amount").value = "";
 })
-
 toCurrency.addEventListener("change", e=>{
     document.querySelector("#to-currency-icon").innerText = toCurrency.value;
     document.querySelector("form #output-amount").value = "";
 })
 
+
+// Function to load currency flag
 function loadFlag(element){
     for(let code in country_list){
         if(code == element.value){
@@ -38,12 +42,13 @@ function loadFlag(element){
     }
 }
 
-
+// Event listener for exchange rate button click
 getButton.addEventListener("click", e =>{
     e.preventDefault();
     getExchangeRate();
 });
 
+// Event listener for exchange rate button click to handle currency swap
 const exchangeIcon = document.querySelector("form #sync-alt-icon");
 exchangeIcon.addEventListener("click", ()=>{
     let tempCode = fromCurrency.value;
@@ -56,6 +61,7 @@ exchangeIcon.addEventListener("click", ()=>{
     document.querySelector("form #output-amount").value = "";
 })
 
+// Function to handle exchange rate retrieval
 function getExchangeRate(){
     const amount = document.querySelector("form #input-amount");
     const exchangeRateTxt = document.querySelector("form #output-amount");
