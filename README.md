@@ -41,10 +41,14 @@ Se você deseja executar este projeto localmente, siga estas etapas:
 ## Autores
 
 Nome: Vincius Alves
+
 Email: viniciusduartepa@gmail.com
+
 Github: [Link para o github](https://github.com/viniciusduartepa) 
 
 Nome: Gabriel
+
 Email:
+
 Github: 
 
