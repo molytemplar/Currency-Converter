@@ -46,9 +46,10 @@ Email: viniciusduartepa@gmail.com
 
 Github: [Link para o github](https://github.com/viniciusduartepa) 
 
-Nome: Gabriel
+Nome: Gabriel Duarte
 
-Email:
+Email: Gabrielvduarte@unifei.edu.br
 
-Github: 
+Github: [Link para o github]([https://github.com/molytemplar)  
+
 
